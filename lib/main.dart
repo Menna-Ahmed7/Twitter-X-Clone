@@ -13,6 +13,7 @@ class MainMaterialApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       routes: {
         kSplashScreen: (context) => const SplashScreen(),
         kStartScreen: (context) => const StartScreen(),
