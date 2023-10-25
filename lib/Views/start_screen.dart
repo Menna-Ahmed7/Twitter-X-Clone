@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sign_in_button/sign_in_button.dart';
+import 'package:sign_button/sign_button.dart';
 import 'package:tweaxy/Components/sign_in_with.dart';
 import 'package:tweaxy/Components/start_screen_divider.dart';
 import 'package:tweaxy/Components/start_screen_signup_button.dart';
@@ -36,34 +36,40 @@ class StartScreen extends StatelessWidget {
                     SizedBox(
                       width: double.infinity,
                       child: SignWithButton(
-                        type: isDarkMode ? Buttons.googleDark : Buttons.google,
-                        text: 'Continue With Google',
+                        type: isDarkMode
+                            ? ButtonType.googleDark
+                            : ButtonType.google,
+                        
                         onPressed: () {
                           //TODO: implement continue with google logic
                         },
-                        padding: const EdgeInsets.symmetric(vertical: 6),
+                        size: ButtonSize.medium,
                       ),
                     ),
                     SizedBox(
                       width: double.infinity,
                       child: SignWithButton(
-                        type: Buttons.facebookNew,
-                        text: 'Continue With Facebook',
+                        type: !isDarkMode
+                            ? ButtonType.facebook
+                            : ButtonType.facebookDark,
+
                         onPressed: () {
                           //TODO: implement continue with facebook logic
                         },
-                        padding: const EdgeInsets.symmetric(vertical: 11),
+                        size: ButtonSize.large,
                       ),
                     ),
                     SizedBox(
                       width: double.infinity,
                       child: SignWithButton(
-                        type: Buttons.gitHub,
-                        text: 'Continue With Github',
+                        type: !isDarkMode
+                            ? ButtonType.github
+                            : ButtonType.githubDark,
+                        
                         onPressed: () {
                           //TODO: implement continue with github logic
                         },
-                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        size: ButtonSize.medium,
                       ),
                     ),
                     const StartScreenDivider(),

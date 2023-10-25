@@ -1,27 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:sign_in_button/sign_in_button.dart';
+import 'package:sign_button/sign_button.dart';
 
 class SignWithButton extends StatelessWidget {
-  const SignWithButton({
-    super.key,
-    required this.type,
-    required this.onPressed,
-    required this.text,
-    required this.padding,
-  });
-  final Buttons type;
-  final Function onPressed;
-  final String text;
-  final EdgeInsets padding;
+  final ButtonSize size;
+
+  const SignWithButton(
+      {super.key,
+      required this.type,
+      required this.onPressed,
+      required this.size});
+  final ButtonType type;
+  final Function() onPressed;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10.0),
       child: SignInButton(
-        type,
+        buttonType: type,
         onPressed: onPressed,
-        text: text,
-        padding: padding,
+        buttonSize: size,
         elevation: 8,
         shape: RoundedRectangleBorder(
             side: const BorderSide(color: Colors.black12),
