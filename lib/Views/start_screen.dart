@@ -93,6 +93,7 @@ class StartScreen extends StatelessWidget {
                       ),
                     ),
                     InkWell(
+                      key: const ValueKey('loginStartScreen'),
                       onTap: () {
                         //TODO: Goto Login Page
                       },
