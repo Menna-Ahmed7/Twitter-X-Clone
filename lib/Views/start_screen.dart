@@ -73,7 +73,9 @@ class StartScreen extends StatelessWidget {
                       ),
                     ),
                     const StartScreenDivider(),
-                    StartScreenSignupButton(isDarkMode: isDarkMode)
+                    StartScreenSignupButton(
+                      key: const ValueKey('signupStartScreen'),
+                      isDarkMode: isDarkMode)
                   ],
                 ),
               ),

@@ -15,7 +15,9 @@ class StartScreenSignupButton extends StatelessWidget {
         width: double.infinity,
         height: 45,
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            //TODO: Navigate to signup
+          },
           style: ButtonStyle(
               backgroundColor: MaterialStatePropertyAll(
                   isDarkMode ? Colors.white : Colors.black),

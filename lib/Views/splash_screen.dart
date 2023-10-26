@@ -22,11 +22,13 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: Icon(
-          Icons.flutter_dash_outlined,
-          color: Colors.black,
+        child: Image.asset(
+          width: 100,
+          height: 100,
+          'assets/images/logo.png',
+          fit: BoxFit.cover,
         ),
       ),
     );
