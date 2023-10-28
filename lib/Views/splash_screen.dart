@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tweaxy/constants.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 
@@ -26,10 +27,10 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Image.asset(
+        child: SvgPicture.asset(
           width: 100,
           height: 100,
-          'assets/images/logo.png',
+          'assets/images/logo.svg',
           fit: BoxFit.cover,
         ),
       ),

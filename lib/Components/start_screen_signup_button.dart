@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 class StartScreenSignupButton extends StatelessWidget {
   const StartScreenSignupButton({
     super.key,
@@ -20,6 +21,7 @@ class StartScreenSignupButton extends StatelessWidget {
           },
           style: ButtonStyle(
               backgroundColor: MaterialStatePropertyAll(
+                kIsWeb?Colors.lightBlue:
                   isDarkMode ? Colors.white : Colors.black),
               shape: const MaterialStatePropertyAll(
                 RoundedRectangleBorder(
@@ -31,7 +33,7 @@ class StartScreenSignupButton extends StatelessWidget {
           child: Text(
             'Create Account',
             style: TextStyle(
-              color: !isDarkMode ? Colors.white : Colors.black87,
+              color: kIsWeb?Colors.white: !isDarkMode ? Colors.white : Colors.black87,
               fontSize: 15,
               fontWeight: FontWeight.w600,
             ),
