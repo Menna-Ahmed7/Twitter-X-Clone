@@ -13,30 +13,79 @@ class WebStartScreen extends StatelessWidget {
       body: Row(
         children: [
           Expanded(
-            child: SvgPicture.asset('assets/images/logo.svg'),
+            flex: 3,
+            child: SvgPicture.asset(
+              'assets/images/logo.svg',
+              alignment: Alignment.center,
+            ),
           ),
           Expanded(
+              flex: 2,
               child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text(
-                'Happening now',
-                style: TextStyle(
-                  fontSize: 72,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-              const Text(
-                'Join today',
-                style: TextStyle(
-                  fontSize: 36,
-                  fontWeight: FontWeight.w800,
-                ),
-              ),
-              SizedBox(width: 400, child: SignChoose(isDarkMode: isDarkMode),),
-            ],
-          ))
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.only(bottom: 50.0),
+                    child: Text(
+                      'Happening now',
+                      style: TextStyle(
+                        fontSize: 68,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(bottom: 28.0),
+                    child: Text(
+                      'Join today',
+                      style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 350,
+                    child: SignChoose(isDarkMode: isDarkMode),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top:70.0),
+                    child: Column(
+                      
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.only(bottom: 18.0),
+                          child: Text(
+                            'Already Have An Account ?',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 350,
+                          height: 40,
+                          child: OutlinedButton(
+                            onPressed: () {},
+                            key: const ValueKey('webStartScreenLogin'),
+                            style: ButtonStyle(
+                              shape: MaterialStatePropertyAll(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(50),
+                                ),
+                              ),
+                            ),
+                            child: const Text("Sign In"),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ))
         ],
       ),
     );
